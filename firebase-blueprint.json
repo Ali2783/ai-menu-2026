@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "user": {
+      "title": "User",
+      "description": "User profile and settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "userConfig": {
+      "title": "UserConfiguration",
+      "description": "WordPress API configuration for a user",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "siteUrl": { "type": "string" },
+        "username": { "type": "string" },
+        "applicationPassword": { "type": "string" }
+      },
+      "required": ["userId", "siteUrl", "username", "applicationPassword"]
+    },
+    "menu": {
+      "title": "Menu",
+      "description": "User menu data",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "data": { "type": "object" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "data"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "user",
+      "description": "User profile document"
+    },
+    "/userConfigs/{userId}": {
+      "schema": "userConfig",
+      "description": "User WordPress configuration"
+    },
+    "/menus/{menuId}": {
+      "schema": "menu",
+      "description": "User menu data"
+    }
+  }
+}

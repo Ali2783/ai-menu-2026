@@ -1,0 +1,8 @@
+{
+  "name": "menuanalizer",
+  "description": "Transform physical menu photos into polished, digital, print-ready designs using AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
