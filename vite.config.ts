@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 export default defineConfig(() => {
   return {
     // IMPORTANT: Change 'AI-MENU' to your actual repository name
-    base: "/ai-menu/", 
+    base: "/ai-menu-2026/", 
     
     plugins: [react(), tailwindcss()],
     resolve: {
